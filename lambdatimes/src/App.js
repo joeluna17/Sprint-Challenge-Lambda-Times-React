@@ -3,7 +3,8 @@ import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Content from './components/Content/Content';
 
-const App = () => {
+ const App = ()=> {
+
   return (
     <div className="App">
       <TopBar />
@@ -11,6 +12,7 @@ const App = () => {
       <Content />
     </div>
   );
+
 }
 
 export default App;
