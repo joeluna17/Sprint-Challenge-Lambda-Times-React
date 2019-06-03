@@ -18,26 +18,23 @@ export default class Content extends Component {
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
-    console.log("CDM")
+    
       this.setState({
         tabs: tabData,
         cards: cardData
       })
   }
 
-  selectTabHandler = (e,id) => {
-      console.log(e,id)
+  selectTabHandler = (e,tab) => {
+    
+      this.setState({
+        selected: tab
+    })
 
   }
 
-  changeSelected = tab => {
+  changeSelected = (tab) => {
     // this function should take in the tab and update the state with the new tab.
-    console.log(tab)
-    
-      this.setState({
-          selected: tab
-      })
-      console.log(this.state.selected)
   };
 
   filterCards = () => {
@@ -55,7 +52,7 @@ export default class Content extends Component {
     */
    var filterArray = []
       this.state.cards.map(card =>{
-          if(this.state.selected = 'all'){
+          if(this.state.selected ==='all'){
               return filterArray = [...this.state.cards]
           } else if(card.tab === this.state.selected){
                 return filterArray.push(card)
