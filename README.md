@@ -29,9 +29,24 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+  	ProtoTypes are used for type checking and validating the data that is being passed to components via props. ProtoTypes check the shape of the data being passed through as well as the raw/permeative types (string, int, boolean), and help catch and prevent bugs as our apps grow in complexity. It is important to type check in JavaScript because of the dynamic nature of the language meaning that the compiler does not force a strict or safe type to be passed in through a function or a variable I as the compiler will try and pass arguments through a function or var and not enforce any protocol on what the var should actually be. This is both a good and bad thing as it allows for a flexibility that other languages do not. It also can introduce errors if the programmer does not keep a vigilant eye on what they are coding.
+
+
+
 - [ ] Describe a life-cycle event in React?
+
+    		The React life-cycle event is has multiple transition of states and rely on different methods and user interaction to execute, but on the most basic way to explain it is that the application is born, the application grow, and the application dies. When born the application is calling the classical constructor method and setting up the state variables as well as calling the super class that the component is inheriting from. Afterwards the render method is called and tells the Dom what should be displayed to the user which shortly after calls the componentDidMount method that says the scaffold of the apps UI has loaded and here we can choose to do something or not. When Growing some data on the state is changed and because of that there are multiple methods that are called that being shouldComponentUpdate which can, on some logic change some data or UI in the method or not, but the most important method being called and executed in the render function which reloads the components data or UI to reflect the changes. This function stays alive through the beginning and changes of the life cycle. This method is considered the life blood of the app. The death of the application occurs when data and the UI will be unmounted from memory and the application will be terminated. This will call one function called componentWIllUnmount which is used as a clean up method.
+
 - [ ] Explain the details of a Higher Order Component?
+
+    	A HOC is used to take a functional component and wrap it with more functionality via a classical component and allows the functional component to have access to data and other functionality that HOC may have and implement. The best part of an HOC is that it allows for more reusability via composition rather that linking components through inheritance. Allowing components to share traits and yet allowing components to have individuality and control their own state and UI. 
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+
+        They first way to style components in react and actually my preferred method as of right not is plain css/sass/less approach. Having a style page and associating a className with the component to update the UI design foe each individual component. This is straight forward and familiar to users that have been coding traditional static websites. 
+		The second way to style components is to use React Strap which is a third party library that allows you to take advantage of pre composed components and make easy changes to the components without a lot of overhead.
+		The third way to style components and one that I like more and will eventually migrate to with more practice is the the styled-components which is a library to write css in js just like jsx allows us to write html in js. This implementation of css in js allows us to encapsulate all component related responsibilities and do alway with classNames that must be used to style components directly in the build file and also allowing us to take advantage of js to manipulate how the component should display dependent on some logical condition which is a big plus.
 
 ## Project Setup
 
