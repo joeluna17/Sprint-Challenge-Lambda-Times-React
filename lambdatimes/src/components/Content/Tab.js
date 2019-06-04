@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
@@ -8,7 +9,6 @@ const Tab = props => {
     <div
       className={`tab ${props.tab}`}
       onClick={(e) => {
-
               props.selectTabHandler(e,props.tab)
              
         /* Replace this dummy click handler function with your selectTabHandler function from props 
@@ -21,5 +21,10 @@ const Tab = props => {
 };
 
 // Make sure you include PropTypes on your props.
+Tab.protoTypes = {
+    tab: PropTypes.shape(
+      PropTypes.string.isRequired
+    )
+}
 
 export default Tab;
